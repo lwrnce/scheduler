@@ -1,9 +1,15 @@
 import Header from './components/Header';
+import TimeTable from './components/TimeTable';
 import './index.css';
 
 function App() {
   return (
-      <Header />
+    <>
+      <div className='container-fluid'>
+        <Header />
+        <TimeTable/>
+      </div>
+    </>
   );
 }
 

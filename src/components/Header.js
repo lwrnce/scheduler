@@ -1,16 +1,18 @@
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import { Container, Row, Col } from 'react-bootstrap';
+import CurrentDate from './CurrentDate';
 
 const Header = ({title}) => {
+    
     return (
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
             <Container fluid={true}>
                 <Row>
-                    <Col md={8} sm={12} className="px-0">
+                    <Col>
                         <h1 className="display-3">{title}</h1>
                         <p className="lead">A simple calendar app for scheduling your work day</p>
-                        <p idName="currentDay" className="lead"></p>
+                        <p idname="currentDay" className="lead">{CurrentDate}</p>
                     </Col>
                 </Row>
             </Container>
@@ -23,7 +25,7 @@ Header.defaultProps = {
 }
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: propTypes.string.isRequired,
 }
 
 export default Header;
