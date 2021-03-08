@@ -1,13 +1,26 @@
-import React from 'react'
-import { format } from 'date-fns'
+import { format, utcToZonedTime } from 'date-fns';
+import { Container, Row, Col } from 'react-bootstrap';
 
-var CurrentDate = () => {
-    var showdate=format(new Date(), "dd.MM.yyyy");
-    console.log(showdate);
+const CurrentDate = () => {
+    const laTime = 'America/'
+    const showDay = format(new Date(), 'cccc');
+    const showDate = format(new Date(), "LLLL d, yyyy");
+    let dayDisplay = JSON.stringify(showDay);
+    let dateDisplay = JSON.stringify(showDate);
+
     return (
-        <div>
-             <p>{showdate}</p>     
-        </div>
+        <Container>
+            <Row>
+                <Col className='text-center'>
+                    <p>{dayDisplay}</p>
+                </Col>
+            </Row>
+            <Row>
+                <Col className='text-center'>
+                    <p>{dateDisplay}</p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
