@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from './Button'
 
@@ -25,8 +25,8 @@ const TimeTable = () => {
 
     const onClick = () => {
         console.log({text})
-        localStorage.setItem('event', {text})
     }
+    
     return (
         <Container className="time-block">
             <Row>
@@ -46,7 +46,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="nineAM" type='text' placeholder='Add event...' value={text.nineAM} onChange={handleChange}></textarea>
+                        <textarea name="nineAM" placeholder='Add event...' value={text.nineAM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -59,7 +59,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="tenAM" type='text' placeholder='Add event...' value={text.tenAM} onChange={handleChange}></textarea>
+                        <textarea name="tenAM" placeholder='Add event...' value={text.tenAM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -72,7 +72,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="elevenAM" type='text' placeholder='Add event...' value={text.elevenAM} onChange={handleChange}></textarea>
+                        <textarea name="elevenAM" placeholder='Add event...' value={text.elevenAM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -85,7 +85,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="twelvePM" type='text' placeholder='Add event...' value={text.twelvePM} onChange={handleChange}></textarea>
+                        <textarea name="twelvePM" placeholder='Add event...' value={text.twelvePM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -98,7 +98,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="onePM" type='text' placeholder='Add event...' value={text.onePM} onChange={handleChange}></textarea>
+                        <textarea name="onePM" placeholder='Add event...' value={text.onePM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -111,7 +111,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="twoPM" type='text' placeholder='Add event...' value={text.twoPM} onChange={handleChange}></textarea>
+                        <textarea name="twoPM" placeholder='Add event...' value={text.twoPM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -124,7 +124,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="threePM" type='text' placeholder='Add event...' value={text.threePM} onChange={handleChange}></textarea>
+                        <textarea name="threePM" placeholder='Add event...' value={text.threePM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -137,7 +137,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="fourPM" type='text' placeholder='Add event...' value={text.fourPM} onChange={handleChange}></textarea>
+                        <textarea name="fourPM" placeholder='Add event...' value={text.fourPM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
@@ -150,7 +150,7 @@ const TimeTable = () => {
                 </Col>
                 <Col md={8} sm={4}>
                     <form className='add-form'>
-                        <textarea name="fivePM" type='text' placeholder='Add event...' value={text.fivePM} onChange={handleChange}></textarea>
+                        <textarea name="fivePM" placeholder='Add event...' value={text.fivePM} onChange={handleChange}></textarea>
                     </form>
                 </Col>
                 <Col>
