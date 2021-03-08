@@ -23,9 +23,21 @@ const TimeTable = () => {
             [e.target.name]: value
         });
     }
+    
+    var times = ['nineAM', 'tenAM', 'elevenAM', 'twelvePM', 'onePM', 'twoPM', 'threePM', 'fourPM', 'fivePM']
 
-    const onClick = () => {
-        console.log({text})
+    times.forEach(getLocalStorage);
+
+    function getLocalStorage(item, index) {
+        const value = localStorage.getItem(item);
+        if (value) {
+            text[item] = value;
+        }
+    }
+
+    const onClick = (e) => {
+        const value = e.target.value;
+        localStorage.setItem(value, text[value])
     }
     
     return (
@@ -51,7 +63,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='nineAM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -64,7 +76,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='tenAM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -77,7 +89,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='elevenAM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -90,7 +102,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='twelvePM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -103,7 +115,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='onePM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -116,7 +128,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='twoPM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -129,7 +141,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='threePM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -142,7 +154,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='fourPM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
             <Row>
@@ -155,7 +167,7 @@ const TimeTable = () => {
                     </form>
                 </Col>
                 <Col>
-                    <Button color='steelblue' text='Save' height='100px' onClick={onClick} />
+                    <Button value='fivePM' color='steelblue' text='Save' height='100px' onClick={onClick} />
                 </Col>
             </Row>
         </Container>
